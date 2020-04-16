@@ -1,6 +1,10 @@
 node {
+     stage('SCM'){
+          echo 'gathering code from version control'
+     }
      stage('Build') {
         echo 'Building....'
+        echo 'Buildong new feature'
      }
      stage('Test') {
         echo 'Testing....'
