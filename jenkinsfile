@@ -1,9 +1,11 @@
 node {
      stage('SCM') {
 	echo 'gathering code from version control'
+	git branch: '$(branch)', url: 'https://github.com/suresh-13/Hellopipe.git'
      }
      stage('Build') {
         echo 'Building....'
+	sh gradle --version
 	echo 'Buiding new feature'
      }
      stage('Test') {
